@@ -52,7 +52,7 @@ inline T & Cache<Key, KeyProvider, Allocator>::get(const Key & key)
 {
     auto it = std::find_if(m_queue_top.begin(), m_queue_top.end(), [&key](const KeyProvider * ptr) {
         return *ptr == key;
-    });е
+    });
     if (it != m_queue_top.end()) {
         m_queue_top.splice(m_queue_top.begin(), m_queue_top, it);
         return *static_cast<T *>(m_queue_top.front());
