@@ -1,7 +1,5 @@
 #include "pool.h"
 
-#include <cmath>
-
 namespace {
 std::size_t pow2(std::size_t n)
 {
